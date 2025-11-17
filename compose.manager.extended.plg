@@ -5,7 +5,7 @@
 <!ENTITY version     "2025.11.17">
 <!ENTITY launch      "Settings/&name;">
 <!ENTITY packageVER  "&version;">
-<!ENTITY packageMD5  "6afc27ddd26c4a2fe1d66324adda8783">
+<!ENTITY packageMD5  "e3131863941e1972be7df8401cc0544d">
 <!ENTITY packageName "&name;-package-&packageVER;">
 <!ENTITY packagefile "&packageName;.txz">
 <!ENTITY github      "ImJustAskingDude/compose_plugin_extended">
@@ -215,4 +215,5 @@ rm -f $(ls &pluginLOC;/&name;*.txz 2>/dev/null|grep -v '&packageVER;')
 </FILE> 
 
 </PLUGIN>
+
 
