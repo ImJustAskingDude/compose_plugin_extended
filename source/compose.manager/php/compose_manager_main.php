@@ -123,8 +123,9 @@ foreach ($composeProjects as $project) {
   $o .= "</td>";
   $o .= "<td width=25%></td>";
   $buttons = [
-    ["Compose Up", "ComposeUp", "up"], 
-    ["Compose Down", "ComposeDown", "down"], 
+    ["Compose Up", "ComposeUp", "up"],
+    ["Compose Up Force", "ComposeUpForce", "upforce"],
+    ["Compose Down", "ComposeDown", "down"],
     ["Update Stack", "UpdateStack", "update"]
   ];
 
@@ -711,10 +712,21 @@ function editStackSettings(myID) {
 function ComposeUp(path, profile="") {
   var height = 800;
   var width = 1200;
-  
+
   $.post(compURL,{action:'composeUp',path:path,profile:profile},function(data) {
     if (data) {
       openBox(data,"Stack "+basename(path)+" Up",height,width,true);
+    }
+  })
+}
+
+function ComposeUpForce(path, profile="") {
+  var height = 800;
+  var width = 1200;
+
+  $.post(compURL,{action:'composeUpForce',path:path,profile:profile},function(data) {
+    if (data) {
+      openBox(data,"Stack "+basename(path)+" Up (Force)",height,width,true);
     }
   })
 }

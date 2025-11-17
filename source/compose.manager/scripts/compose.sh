@@ -81,6 +81,14 @@ case $command in
     eval docker compose $envFile $files $options -p "$name" up $command_options -d 2>&1
     ;;
 
+  upforce)
+    if [ "$debug" = true ]; then
+      logger "docker compose $envFile $files $options -p "$name" build --no-cache && docker compose $envFile $files $options -p "$name" up --force-recreate $command_options -d"
+    fi
+    eval docker compose $envFile $files $options -p "$name" build --no-cache 2>&1
+    eval docker compose $envFile $files $options -p "$name" up --force-recreate $command_options -d 2>&1
+    ;;
+
   down)
     if [ "$debug" = true ]; then
       logger "docker compose $envFile $files $options -p "$name" down"

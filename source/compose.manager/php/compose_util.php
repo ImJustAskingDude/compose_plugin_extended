@@ -120,6 +120,9 @@ switch ($_POST['action']) {
 	case 'composeUp':
 		echoComposeCommand('up');
 		break;
+	case 'composeUpForce':
+		echoComposeCommand('upforce');
+		break;
 	case 'composeDown':
 		echoComposeCommand('down');
 		break;
