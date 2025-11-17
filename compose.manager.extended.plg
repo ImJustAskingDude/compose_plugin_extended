@@ -1,7 +1,7 @@
 <?xml version='1.0' standalone='yes'?>
 <!DOCTYPE PLUGIN [
-<!ENTITY name        "compose.manager">
-<!ENTITY author      "dcflachs">
+<!ENTITY name        "compose.manager.extended">
+<!ENTITY author      "ImJustAskingDude">
 <!ENTITY version     "2025.11.17">
 <!ENTITY launch      "Settings/&name;">
 <!ENTITY packageVER  "&version;">
@@ -26,6 +26,7 @@
 
 <CHANGES>
 ###2025.11.17
+- Forked from dcflachs/compose_plugin as compose.manager.extended
 - Added "Compose Up Force" button that rebuilds without cache and forces container recreation
 ###2025.11.01
 - Docker Compose v2.40.3
