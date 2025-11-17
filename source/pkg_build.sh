@@ -70,11 +70,11 @@ sed -i'' 's/t.swal/t.swal2/' $tmpdir/usr/local/emhttp/plugins/compose.manager/ja
 sed -i'' 's/e.sweetAlert/e.sweetAlert2/' $tmpdir/usr/local/emhttp/plugins/compose.manager/javascript/sweetalert/sweetalert2.min.js
 sed -i'' 's/e.swal/e.swal2/' $tmpdir/usr/local/emhttp/plugins/compose.manager/javascript/sweetalert/sweetalert2.min.js
 
-makepkg -l y -c y $OUTPUT_FOLDER/compose.manager-package-${version}.txz
+makepkg -l y -c y $OUTPUT_FOLDER/compose.manager.extended-package-${version}.txz
 
 cd /
 
-MD5=`md5sum $OUTPUT_FOLDER/compose.manager-package-${version}.txz`
+MD5=`md5sum $OUTPUT_FOLDER/compose.manager.extended-package-${version}.txz`
 
 echo "MD5: $MD5"
 
